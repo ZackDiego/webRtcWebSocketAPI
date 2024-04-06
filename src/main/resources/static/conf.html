@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <title>WebRTC Video Conferencing Application</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<!-- Title & header of demo application. -->
+<div class="container">
+    <h3 class="text-center">WebRTC Video Conferencing Application</h3>
+</div>
+
+<!-- Conference room ID input and connect button -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter Conference Room ID" id="roomIdInput">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button" id="connectButton">Connect</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Video containers -->
+<div class="container" style="margin-top: 20px;">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="text-center">You</h3>
+            <video id="localVideo" class="img-responsive center-block" autoplay muted></video>
+        </div>
+        <div class="col-md-6">
+            <h3 class="text-center">Other Person</h3>
+            <video id="remoteVideo" class="img-responsive center-block" autoplay></video>
+        </div>
+    </div>
+</div>
+
+<!-- Button to leave video conference. -->
+<div class="container" style="margin-top: 20px;">
+    <div class="text-center">
+        <button id="leaveButton" class="btn btn-danger">Leave Video Conference</button>
+    </div>
+</div>
+
+<script type="text/javascript" src="conf.js?reload=true"></script>
+
+</body>
+</html>
